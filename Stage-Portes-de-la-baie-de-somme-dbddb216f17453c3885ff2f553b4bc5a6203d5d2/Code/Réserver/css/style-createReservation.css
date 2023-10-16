@@ -1,0 +1,197 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#reservation {
+    margin-left: 2em;
+}
+
+.rooms {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.formroom {
+    margin-right: 1em;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(144, 55, 10, 0.2);
+    height: 100vh;
+}
+
+.frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.custom-btn {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: auto;
+    height: auto;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* 16 */
+.btn-16 {
+    border: none;
+    color: #000;
+}
+
+.btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+
+.btn-16:hover {
+    color: #000;
+}
+
+.btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+.btn-16:active {
+    top: 2px;
+}
+
+.top-left-input {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.prixReservation {
+    color: #000;
+    margin-top: 10px;
+}
+
+.buttonValider {
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    margin-top: 25px;
+}
+
+.buttonValider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.buttonValider:hover::before {
+    width: 100%;
+}
+
+.buttonValider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.buttonValider:active {
+    transform: scale(0.95);
+}
+
+.nbrNuitées {
+    margin-top: 10px;
+}
+
+.msgConfirmation {
+    margin-top: 10px;
+}
+
+.small-input {
+    width: 25px;
+}
+
+.small-input2 {
+    width: 50px;
+}
+
+.top-left-down {
+    top: 0.5em;
+    left: 0.5em;
+    width: 140px;
+    margin-top: 50px;
+}
+
+.motDe {
+    margin-right: 5px;
+}
+
+.lettreA {
+    margin-left: 5px;
+}
+
+.date2CSS {
+    margin-left: 5px;
+}
+
+.msgErrorCreaReserva {
+    margin-top: 20px;
+}

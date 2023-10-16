@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #fc466b, #3f5efb) no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial, sans-serif;
+}
+
+.centre {
+    position: relative;
+}
+
+form {
+    background: rgba(255, 255, 255, .3);
+    padding: 3rem;
+    width: 450px;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    /* effet à ajouter */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+}
+
+h2 {
+    color: white;
+    font-weight: 500;
+    opacity: .7;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    /*    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);*/
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, .2);
+    color: white;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    transition: all .3s;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+::placeholder {
+    color: white;
+}
+
+td {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .7);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+td.password {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img.eye {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    color: white;
+    transition: all .2s;
+    right: 10px;
+}
+
+img.eye: {
+    display: none;
+}
+
+img.eye-off {
+    display: block;
+}
+
+img.eye:hover,
+img.eye:focus {
+    cursor: pointer;
+}
+
+input[type="password"]:focus {
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);
+}
+
+input.inscription {
+    background: rgba(255, 255, 255, .2);
+    color: #ddd;
+    font-size: 14px;
+    transition: all .3s;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+input.inscription:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.drop {
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    position: absolute;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
+}
+
+.drop-1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
+}
+
+.drop-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -50px;
+    left: -20px;
+
+}
+
+.drop-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 120px;
+    right: -50px;
+    z-index: -1;
+}
+
+.drop-4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -50px;
+}
+
+.drop-5 {
+    height: 60px;
+    width: 60px;
+    bottom: 280px;
+    left: 60px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 570px) {
+    form {
+        max-width: 570px;
+        min-width: 320px;
+        width: auto;
+    }
+
+    .drop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    input {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+}
+
+.errormail {
+    margin-top: 25px;
+    color: red;
+}
+
+/* Placeholders */
+::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+/* Chrome 56, Safari 9 */
+:-moz-placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+/* FF 4-18 */
+::-moz-placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+/* FF 19-51 */
+:-ms-input-placeholder {
+    opacity: 1;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+/* IE 10+ */
+::placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+/* Modern Browsers */
+
+/* Focus */
+*:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+/* Chrome 56, Safari 9 */
+*:focus:-moz-placeholder {
+    opacity: 0;
+}
+
+/* FF 4-18 */
+*:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+/* FF 19-50 */
+*:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
+/* IE 10+ */
+*:focus::placeholder {
+    opacity: 0;
+}
+
+/* Modern Browsers */
+
+
+input.connexion {
+    background: rgba(255, 255, 255, .2);
+    color: #ddd;
+    font-size: 14px;
+    transition: all .3s;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+input.connexion:hover {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.erroridentifiant {
+    margin-top: 25px;
+    color: red;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+    -o-appearance: none;
+    margin: 0
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input-group select {
+    margin-right: 5px;
+}
+
+.phone-input-group select {
+    background-color: rgb(213, 152, 215);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lettrePlus {
+    margin-right: 3px;
+  }

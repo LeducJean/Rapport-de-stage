@@ -1,0 +1,16 @@
+faire une affiche en fr, en, allemand
+mettre a jour les infos
+
+
+Samu : 15
+pompier : 18
+police : 17
+hopital : 03 22 25 52 00
+edf-gdf abbeville : 3004
+   urgence gaz : 03 22 24 57 54
+   urgence électricité : 09 72 67 50 80
+gendarmerie nationale : 03 22 24 29 90
+centre antipoison :
+   Amiens : 03 22 08 80 00
+   Paris : 01 40 05 42 14
+   Lille : 03 20 44 59 62
