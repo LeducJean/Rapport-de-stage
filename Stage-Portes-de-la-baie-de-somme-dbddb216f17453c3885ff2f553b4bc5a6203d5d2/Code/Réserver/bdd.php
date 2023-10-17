@@ -1,7 +1,7 @@
 <?php
-$ipbdd = "192.168.1.30";
+$ipbdd = "localhost";
 $usernamebdd = "root";
-$passwordbdd = "04012mM&04";
+$passwordbdd = "";
 $namebdd = "campinglesportesdelabaiedesomme";
 
 try {
