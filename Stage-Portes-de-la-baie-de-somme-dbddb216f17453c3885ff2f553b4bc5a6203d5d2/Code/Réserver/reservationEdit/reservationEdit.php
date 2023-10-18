@@ -42,7 +42,7 @@ require "reservationEditAff.php";
 
     <main>
         <div class="jumbotron centerTextReservation textEnBlanc">
-            <h1>Réservations acceptées</h1>
+            <h1>Modifier réservations</h1>
         </div>
         <div class="all">
 
