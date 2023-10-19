@@ -47,20 +47,17 @@ if (isset($_POST['name'], $_POST['password'], $_POST['mail'], $_POST['confirm_ma
                             // Hachage du mot de passe
                             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-                            // Commande SQL
-                            $sql = "INSERT INTO `user` (`name`, `password`, `mail`, `phoneCountry` ,`phone`) VALUES (:name, :password, :mail, '+' :phoneCountry, :phone)";
+                            $sql = "INSERT INTO `user` (`name`, `password`, `mail`, `phoneCountry` ,`phone`)
+                            VALUES (:name, :password, :mail, '+' :phoneCountry, :phone)";
 
-                            // Préparation de la requête SQL
                             $query = $bdd->prepare($sql);
 
-                            // Attribution des valeurs aux paramètres
                             $query->bindValue(':name', $name);
                             $query->bindValue(':password', $hashedPassword);
                             $query->bindValue(':mail', $mail);
                             $query->bindValue(':phoneCountry', $phoneCountry);
                             $query->bindValue(':phone', $phone);
 
-                            // Exécution de la requête SQL
                             $query->execute();
 
                             // Récupérer l'ID de l'utilisateur nouvellement inscrit
